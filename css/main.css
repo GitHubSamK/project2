@@ -40,20 +40,43 @@ nav {
 
 
 }
+
+.hide {
+    display: none;
+  }
+  
+  
+  .now {
+    transition: opacity .5s ease-out;
+  }
+
+.backbutton {
+    float: left;
+}
+
+.nextbutton{
+    float: right;
+}
 .pictures {
     background-color: rgba(0, 224, 34, 0.743);
     border: 2px solid darkgreen;
     margin: auto;
-    width: 50%;
+    width: 40%;
     padding: 25px;
     margin-top: 20px;
     margin-bottom: 20px;
 
 }
+figcaption{
+    text-align: center;
+    padding: 5px;
+}
 
 img{
-    width: 400px;
+    width: 50%;
     height: 400px;
+    display: block;
+    margin: auto;
 }
 
 
@@ -75,6 +98,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    
 }
 
 h2{

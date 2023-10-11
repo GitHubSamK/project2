@@ -283,9 +283,11 @@ function showNewSlides(e) {
     //checkto see which button was clicked
     if(e){
         
-    const myButton = e.target;
+    var myButton = e.target;
     console.log("test", e);
     }
+
+    
     //const showing =
     let nextUpOne = ""
 

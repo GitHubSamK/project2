@@ -50,7 +50,7 @@ function init() {
 
     controlsDivTwo.className = 'controlstwo';
 
-    controlsDivTwo.innerHTML = '<button><a href="#" class="backbuttontwo">Back</a></button><button><a href="#" class="nextbuttontwo">Next</a></button>';
+    controlsDivTwo.innerHTML = '<button><a href="#" class="backbuttontwo">Previous Slideshow</a></button><button><a href="#" class="nextbuttontwo">Next SlideShow</a></button>';
 
 
     //add controls to page
@@ -262,6 +262,7 @@ function showNewSlide(e) {
 
 function showNewSlides(e) {
     if (e){
+
         e.preventDefault();
         window.clearInterval(myInterval);
     }

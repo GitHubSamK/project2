@@ -3,6 +3,7 @@ h1 {
     text-align: center;
     
     
+    
 }
 
 * {
@@ -41,14 +42,43 @@ nav {
 
 }
 
+
+
 .hide {
     display: none;
   }
+
   
+
   
-  .now {
-    transition: opacity .5s ease-out;
-  }
+ .controls{
+    
+    display: flex;
+    justify-content: space-evenly;
+
+ } 
+
+ .controlstwo{
+
+    display: flex;
+    justify-content: space-evenly;
+
+ }
+
+ a {
+
+    color: darkgreen;
+ }
+
+ button{
+
+    color: darkgreen;
+    background-color: coral;
+    border: 1px solid darkgreen;
+ }
+
+
+
 
 .backbutton {
     float: left;
@@ -57,11 +87,19 @@ nav {
 .nextbutton{
     float: right;
 }
+
+.backbuttontwo {
+    float: left;
+}
+
+.nextbuttontwo{
+    float: right;
+}
 .pictures {
     background-color: rgba(0, 224, 34, 0.743);
     border: 2px solid darkgreen;
     margin: auto;
-    width: 40%;
+    width: 50%;
     padding: 25px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -72,11 +110,76 @@ figcaption{
     padding: 5px;
 }
 
+.gallery{
+
+    background-color: rgba(0, 224, 34, 0.743);
+    border: 2px solid darkgreen;
+    margin: auto;
+    width: 60%;
+    padding: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+@media screen and (max-width:720px) {
+
+    .pictures {
+        background-color: rgba(0, 224, 34, 0.743);
+        border: 2px solid darkgreen;
+        margin: auto;
+        width: 80%;
+        padding: 25px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    
+    }
+   
+    
+    .gallery{
+    
+        background-color: rgba(0, 224, 34, 0.743);
+        border: 2px solid darkgreen;
+        margin: auto;
+        width: 100%;
+        padding: 25px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    
+    }
+
+    nav {
+
+    
+        margin: auto;
+        width: 100%;
+    
+    
+    }
+
+}
+
+
+
+
+
 img{
-    width: 50%;
-    height: 400px;
+    width: 100%;
+    height: 300px;
     display: block;
     margin: auto;
+    animation: fade ease-in-out 1s;
+    
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
 }
 
 
@@ -86,6 +189,7 @@ img{
     margin: auto;
     width: 50%;
     padding: 25px;
+   
 }
 main {
     padding-top: 15px;
@@ -104,10 +208,12 @@ body{
 h2{
     text-align: center;
     padding-top: 25px;
+   
 }
 
 p{
     text-align: center;
+    
 }
 nav ul {
     display: flex;
@@ -118,7 +224,7 @@ nav ul {
 }
 
 a:hover{
-    color: orange;
+    color: white;
 }
 
 

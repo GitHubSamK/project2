@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', init);
 var myInterval = setInterval(showNewSlides, 5000);
+var myInterval = setInterval(showNewSlide, 5000);
 
 // prepare for interaction
 function init() {
@@ -114,7 +115,11 @@ function init() {
 
 function showNewSlide(e) {
 
-    e.preventDefault();
+    if (e){
+
+        e.preventDefault();
+        window.clearInterval(myInterval);
+    }
 
     const controlsDiv = document.querySelector(".controls");
     const currentSlide = document.querySelector('.now');
@@ -129,11 +134,15 @@ function showNewSlide(e) {
 
 
     //checkto see which button was clicked
-    const myButton = e.target;
+    if(e){
+        
+        var myButton = e.target;
+        console.log("test", e);
+        }
     //const showing =
     let nextUp = ""
 
-    if (myButton.classList.contains('backbutton')) {
+    if (!e || myButton.classList.contains('backbutton')) {
         nextUp = currentSlide.previousElementSibling;
     } else {
         nextUp = currentSlide.nextElementSibling;
@@ -178,11 +187,11 @@ function showNewSlide(e) {
 
 
 
-    nextBtn.addEventListener("click", showNewSlide);
-    backBtn.addEventListener("click", showNewSlide);
+   // nextBtn.addEventListener("click", showNewSlide);
+    //backBtn.addEventListener("click", showNewSlide);
 
     
-
+    console.log (nextUp,nextUp.previousElementSibling);
     
 
   

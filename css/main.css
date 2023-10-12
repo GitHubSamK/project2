@@ -44,6 +44,7 @@ nav {
 
 
 
+
 .hide {
     display: none;
   }
@@ -62,8 +63,11 @@ nav {
 
     display: flex;
     justify-content: space-evenly;
+    
 
  }
+
+ 
 
  a {
 
@@ -82,19 +86,31 @@ nav {
 
 .backbutton {
     float: left;
+    
 }
 
 .nextbutton{
     float: right;
+    
 }
 
 .backbuttontwo {
     float: left;
+    
 }
 
 .nextbuttontwo{
     float: right;
+    
+    
 }
+
+.currentBtn {
+
+    color: yellow;
+    
+}
+
 .pictures {
     background-color: rgba(0, 224, 34, 0.743);
     border: 2px solid darkgreen;

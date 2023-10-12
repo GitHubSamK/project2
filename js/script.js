@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', init);
-var myInterval = setInterval(showNewSlides, 5000);
-var myInterval = setInterval(showNewSlide, 5000);
+var myInterval1 = setInterval(showNewSlide, 4000);
+var myInterval2 = setInterval(showNewSlides, 4000);
+
 
 // prepare for interaction
 function init() {
@@ -51,7 +52,7 @@ function init() {
 
     controlsDivTwo.className = 'controlstwo';
 
-    controlsDivTwo.innerHTML = '<button><a href="#" class="backbuttontwo">Previous Slideshow</a></button><button><a href="#" class="nextbuttontwo">Next SlideShow</a></button>';
+    controlsDivTwo.innerHTML = '<a href="#" class="backbuttontwo">Soccerballs</a><a href="#" class="nextbuttontwo">Jerseys, Cleats and Flags</a>';
 
 
     //add controls to page
@@ -63,8 +64,8 @@ function init() {
     const nextBtnTwo = controlsDivTwo.querySelector(".nextbuttontwo");
 
     //add interactivity 
-    backBtnTwo.addEventListener('click', newShow);
-    nextBtnTwo.addEventListener('click', newShow);
+    backBtnTwo.addEventListener('click', switchAlbum);
+    nextBtnTwo.addEventListener('click', switchAlbum);
 
 
     
@@ -118,7 +119,7 @@ function showNewSlide(e) {
     if (e){
 
         e.preventDefault();
-        window.clearInterval(myInterval);
+        window.clearInterval(myInterval1);
     }
 
     const controlsDiv = document.querySelector(".controls");
@@ -200,6 +201,30 @@ function showNewSlide(e) {
 }
 
 
+function switchAlbum(e) {
+
+    e.preventDefault(); 
+
+    const albumone = document.querySelector('.slideshow');
+    const albumtwo = document.querySelector('.slideshowtwo');
+   
+
+    if(e.target.classList.contains("backbuttontwo")){
+
+        albumone.classList.add('hide');
+ 
+        albumtwo.classList.remove('hide');
+        
+    } else {
+        albumone.classList.remove('hide');
+        albumtwo.classList.add('hide');
+    }
+
+    
+   
+}
+
+
     function newShow(y) {
 
     y.preventDefault(); 
@@ -239,6 +264,18 @@ function showNewSlide(e) {
 
     }
 
+    if (myButtonTwo.classList.contains('backbuttontwo')) {
+        backBtnTwo.classList.add('currentBtn');
+        nextBtnTwo.classList.remove('currentBtn');
+    }
+    else {
+        backBtnTwo.classList.remove('currentBtn');
+        nextBtnTwo.classList.add('currentBtn');
+    } 
+    
+
+
+
     //nextbutton logic
 
 
@@ -251,7 +288,7 @@ function showNewSlide(e) {
     nextUpTwo.classList.toggle('hide');
     nextUpTwo.classList.toggle('nowtwo');
 
-
+    
     
 
     //changecaption
@@ -273,7 +310,7 @@ function showNewSlides(e) {
     if (e){
 
         e.preventDefault();
-        window.clearInterval(myInterval);
+        window.clearInterval(myInterval2);
     }
     
 

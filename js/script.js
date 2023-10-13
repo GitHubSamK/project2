@@ -52,7 +52,7 @@ function init() {
 
     controlsDivTwo.className = 'controlstwo';
 
-    controlsDivTwo.innerHTML = '<a href="#" class="backbuttontwo">Soccerballs</a><a href="#" class="nextbuttontwo">Jerseys, Cleats and Flags</a>';
+    controlsDivTwo.innerHTML = '<a href="#" class="backbuttontwo">Soccerballs</a><a href="#" class="nextbuttontwo hide">Jerseys, Cleats and Flags</a>';
 
 
     //add controls to page
@@ -205,21 +205,43 @@ function switchAlbum(e) {
 
     e.preventDefault(); 
 
+    const controlsDivTwo = document.querySelector(".controlstwo");
+    const backBtnTwo = controlsDivTwo.querySelector(".backbuttontwo");
+    const nextBtnTwo = controlsDivTwo.querySelector(".nextbuttontwo");
     const albumone = document.querySelector('.slideshow');
     const albumtwo = document.querySelector('.slideshowtwo');
+    
+
    
 
     if(e.target.classList.contains("backbuttontwo")){
 
         albumone.classList.add('hide');
- 
         albumtwo.classList.remove('hide');
         
+        
     } else {
+
         albumone.classList.remove('hide');
         albumtwo.classList.add('hide');
+        
+
     }
 
+    if(e.target.classList.contains("backbuttontwo")){
+        backBtnTwo.classList.add('hide');
+        nextBtnTwo.classList.remove('hide');
+    } else {
+        backBtnTwo.classList.remove('hide');
+        nextBtnTwo.classList.add('hide');
+    }
+   
+    
+    
+
+   
+  
+    
     
    
 }

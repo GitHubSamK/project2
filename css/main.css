@@ -96,18 +96,20 @@ nav {
 
 .backbuttontwo {
     float: left;
+    color: black;
     
 }
 
 .nextbuttontwo{
     float: right;
+    color: black;
     
     
 }
 
 .currentBtn {
 
-    color: yellow;
+    color: greenyellow;
     
 }
 
@@ -144,7 +146,7 @@ figcaption{
         background-color: rgba(0, 224, 34, 0.743);
         border: 2px solid darkgreen;
         margin: auto;
-        width: 80%;
+        width: 100%;
         padding: 25px;
         margin-top: 20px;
         margin-bottom: 20px;
